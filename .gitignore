@@ -1,0 +1,22 @@
+.vercel
+# === SYSTEM TRASH LOCK ===
+AppData/
+appdata/
+*/AppData/
+*/appdata/
+**/AppData/
+**/appdata/
+
+# Windows cache
+**/INetCache/
+**/DXCache/
+**/NVIDIA/
+**/*.nvph
+**/*.tmp
+**/*.log
+
+# OS / IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

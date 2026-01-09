@@ -1,0 +1,35 @@
+Clear-Host
+
+$ROOT = "J:\YISHEN_SOVEREIGN_GROWTH_OS\PUBLIC_NETWORK"
+
+$countries = @("us","sa","mx","br","ca","uk","de","fr","it","es","nl","pl","au","nz","jp","kr","sg","ae","qa","kw","om","bh","eg","tr","ru","ua","kz","uz","th","vn","ph","my","id","in","za","ng","ke","gh","ma","ar","cl","co","pe","ve","uy","pa")
+
+$verticals = @("office-chair","gaming-chair","ergonomic-chair","mesh-chair","recliner","standing-desk","gaming-desk","office-desk","sofa","functional-sofa","accent-chair","bar-chair","dining-chair")
+
+foreach ($c in $countries) {
+ foreach ($v in $verticals) {
+
+  $path = "$ROOT\$c\$v"
+  New-Item -ItemType Directory -Force -Path $path | Out-Null
+
+  $html = "<!DOCTYPE html>`n"
+  $html += "<html lang='en'>`n"
+  $html += "<head>`n"
+  $html += "<meta charset='UTF-8'>`n"
+  $html += "<title>" + $c.ToUpper() + " " + $v + " | YiShen Global</title>`n"
+  $html += "<meta name='description' content='" + $c.ToUpper() + " " + $v + " factory direct supply'>`n"
+  $html += "<link rel='canonical' href='https://yishen.ai/" + $c + "/" + $v + "/'>`n"
+  $html += "</head>`n"
+  $html += "<body>`n"
+  $html += "<h1>" + $c.ToUpper() + " " + $v + "</h1>`n"
+  $html += "<p>YiShen Global official supply network.</p>`n"
+  $html += "</body>`n"
+  $html += "</html>"
+
+  Set-Content "$path\index.html" $html -Encoding UTF8
+  Write-Host "FRACTAL INDEX BUILT → $c / $v" -ForegroundColor Green
+ }
+}
+
+Write-Host ""
+Write-Host " GLOBAL FRACTAL INDEX ENGINE COMPLETE 🚀 " -ForegroundColor Green
