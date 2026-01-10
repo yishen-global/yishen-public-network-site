@@ -1,0 +1,105 @@
+﻿$SITE="J:\YISHEN_SOVEREIGN_GROWTH_OS\PUBLIC_NETWORK\site"
+
+Write-Host "`n[1] Write final Contact Sovereign Page..." -ForegroundColor Cyan
+
+@'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact YiShen Global | yishen.ai · yishenglobal.net Official Gateway</title>
+<meta name="description" content="Official contact gateway of YiShen Global (yishen.ai & yishenglobal.net). Global office furniture & logistics procurement, OEM/ODM manufacturing, sovereign supply chain OS.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://yishen.ai/contact">
+<link rel="alternate" href="https://yishenglobal.net/contact" hreflang="x-default">
+<style>
+body{margin:0;background:#05080c;color:#e6f6ff;font-family:Segoe UI}
+main{max-width:1120px;margin:auto;padding:90px 20px}
+h1{color:#6ef1ff;font-size:40px}
+h2{color:#6ef1ff;margin-top:50px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;margin-top:30px}
+.card{background:#0a1420;border:1px solid #123;border-radius:14px;padding:26px}
+.card strong{color:#6ef1ff}
+.cta{background:#6ef1ff;color:#000;border-radius:10px;padding:14px 28px;text-decoration:none;font-weight:700}
+.dual-domain{margin:30px 0;padding:18px;border:1px dashed #6ef1ff;border-radius:14px}
+</style>
+</head>
+<body>
+<div id="sovereign-nav">
+  <div class="logo">YISHEN GLOBAL</div>
+  <div class="links">
+    <a href="/us">USA</a>
+    <a href="/sa">Saudi</a>
+    <a href="/ae">UAE</a>
+    <a href="/mx">Mexico</a>
+    <a href="/br">Brazil</a>
+    <a href="/jp">Japan</a>
+    <a href="/kr">Korea</a>
+  </div>
+  <div class="cta">
+    <a class="cta-whatsapp" href="https://wa.me/8615157256250">WhatsApp</a>
+    <a class="cta-email" href="mailto:alex.yang@yishenglobal.net">Email</a>
+  </div>
+</div>
+
+<div id="yishen_nav"></div>
+<main>
+<h1>Contact YiShen Global</h1>
+<p>
+Primary Authority: <a href="https://yishen.ai" target="_blank">yishen.ai</a><br>
+Global Brand Mirror: <a href="https://yishenglobal.net" target="_blank">yishenglobal.net</a>
+</p>
+<div class="dual-domain">
+<strong>Dual-Domain Sovereign Binding</strong>
+<p>Both domains represent the same legal & operational entity.</p>
+</div>
+<div class="grid">
+<div class="card">
+<strong>Global HQ (China)</strong>
+<p>Anji · Hangzhou · Zhejiang</p>
+<p><strong>Email</strong><br>alex.yang@yishenglobal.net<br>champion.yang@yishenglobal.net</p>
+<p><strong>WhatsApp</strong><br>+86 188 5727 7313</p>
+<p><strong>WeChat</strong><br>18857277313</p>
+<p><strong>Telegram</strong><br>+86 189 0682 5698</p>
+</div>
+<div class="card">
+<strong>Procurement & OEM Channel</strong>
+<p>Office Chairs · Gaming Chairs · Recliners · Standing Desks · Smart Logistics</p>
+<a href="mailto:alex.yang@yishenglobal.net" class="cta">Request Quotation</a>
+</div>
+<div class="card">
+<strong>Verified Social</strong>
+<p>
+<a href="https://www.linkedin.com/in/alex-yang-yishen/" target="_blank">LinkedIn</a><br>
+<a href="https://t.me/008618906825698" target="_blank">Telegram</a><br>
+<a href="https://www.youtube.com/channel/@alexyang6074" target="_blank">YouTube</a><br>
+<a href="https://x.com/AlexYan03451555" target="_blank">X</a><br>
+<a href="https://www.facebook.com/alex.yang.427745" target="_blank">Facebook</a><br>
+<a href="https://www.instagram.com/alexyang591/" target="_blank">Instagram</a>
+</p>
+</div>
+<div class="card">
+<strong>Response SLA</strong>
+<p>24-hour official response · GMT+8</p>
+</div>
+</div>
+<h2>Why Global Buyers Choose YiShen</h2>
+<ul>
+<li>Direct manufacturing & logistics network</li>
+<li>Predictable lead time & low MOQ</li>
+<li>Transparent compliance & certifications</li>
+<li>OEM branding & drop-shipping supported</li>
+</ul>
+</main>
+<div id="yishen_footer"></div>
+<script defer src="/assets/js/ui-hooks.js"></script>
+</body>
+</html>
+'@ | Set-Content -Encoding UTF8 "$SITE\contact.html"
+
+Write-Host "[2] Deploy to Vercel..." -ForegroundColor Green
+Set-Location $SITE
+vercel --prod --force
+
+Write-Host "`n🔥 DONE — Contact page ignited on yishen.ai & yishenglobal.net" -ForegroundColor Green
+

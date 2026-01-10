@@ -1,12 +1,13 @@
-﻿{
+{
   "version": 2,
-  "builds": [
-    { "src": "public/**", "use": "@vercel/static" }
-  ],
   "routes": [
-    { "src": "^/$", "dest": "/public/index.html" },
-    { "src": "^/404/?$", "dest": "/public/404.html" },
-    { "handle": "filesystem" },
-    { "src": "^(.*)$", "dest": "/public" }
+    { "src": "^/robots.txt$", "dest": "/robots.txt" },
+    { "src": "^/sitemap.xml$", "dest": "/sitemap.xml" },
+    { "src": "^/sitemap-world.xml$", "dest": "/sitemap-world.xml" },
+
+    { "src": "^/([a-z]{2})/([a-z0-9-]+)/?$", "dest": "///index.html" },
+    { "src": "^/([a-z]{2})/?$", "dest": "//index.html" },
+
+    { "src": "^/(.*)$", "dest": "/index.html" }
   ]
 }

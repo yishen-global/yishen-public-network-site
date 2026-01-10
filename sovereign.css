@@ -1,0 +1,27 @@
+#sovereign-nav {
+  position:sticky;
+  top:0;
+  z-index:9999;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 36px;
+  background:#000;
+  color:#fff;
+  font-family:Arial;
+}
+#sovereign-nav a {
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+}
+#sovereign-nav .cta-whatsapp {
+  background:#25D366;
+  padding:8px 16px;
+  border-radius:4px;
+}
+#sovereign-nav .cta-email {
+  background:#444;
+  padding:8px 16px;
+  border-radius:4px;
+}
