@@ -1,13 +1,22 @@
 {
-  "version": 2,
-  "routes": [
-    { "src": "^/robots.txt$", "dest": "/robots.txt" },
-    { "src": "^/sitemap.xml$", "dest": "/sitemap.xml" },
-    { "src": "^/sitemap-world.xml$", "dest": "/sitemap-world.xml" },
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/genesis", "destination": "/yishen-genesis.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/confirm", "destination": "/confirm.html" },
+    { "source": "/solutions", "destination": "/solutions.html" },
+    { "source": "/why-us", "destination": "/why-us.html" },
 
-    { "src": "^/([a-z]{2})/([a-z0-9-]+)/?$", "dest": "///index.html" },
-    { "src": "^/([a-z]{2})/?$", "dest": "//index.html" },
+    { "source": "/resources", "destination": "/resources.html" },
+    { "source": "/tactical-briefing", "destination": "/tactical-briefing.html" },
+    { "source": "/technical-passport", "destination": "/technical-passport.html" },
+    { "source": "/sovereign-matrix", "destination": "/sovereign-matrix.html" },
 
-    { "src": "^/(.*)$", "dest": "/index.html" }
+    { "source": "/site-architecture", "destination": "/site-architecture.html" },
+    { "source": "/clusters", "destination": "/clusters.html" },
+
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" }
   ]
 }

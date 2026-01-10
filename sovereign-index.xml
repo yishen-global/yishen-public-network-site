@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SOVEREIGN>
+  <ROOT>YISHEN_GLOBAL</ROOT>
+  <GENESIS>/yishen-genesis.html</GENESIS>
+  <CONTACT>/contact.html</CONTACT>
+  <CONFIRM>/confirm.html</CONFIRM>
+  <SOLUTIONS>/solutions.html</SOLUTIONS>
+  <ARCHITECTURES>/architectures.html</ARCHITECTURES>
+  <RESOURCES>/resources.html</RESOURCES>
+  <MATRIX>/sovereign-matrix.html</MATRIX>
+  <PASSPORT>/technical-passport.html</PASSPORT>
+</SOVEREIGN>
