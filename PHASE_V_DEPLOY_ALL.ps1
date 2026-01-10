@@ -17,7 +17,7 @@ foreach($c in $countries){
   $p="$SITE\$c"
   if(!(Test-Path $p)){
     New-Item -ItemType Directory -Path $p | Out-Null
-    Copy-Item "$SITE\index.html" "$p\index.html"
+    Copy-Item "$SITE\public\index.html" "$p\index.html"
     Log "Country node: $c"
   }
 }
@@ -27,7 +27,7 @@ foreach($l in $langs){
   $p="$SITE\lang\$l"
   if(!(Test-Path $p)){
     New-Item -ItemType Directory -Path $p | Out-Null
-    Copy-Item "$SITE\index.html" "$p\index.html"
+    Copy-Item "$SITE\public\index.html" "$p\index.html"
     Log "Lang node: $l"
   }
 }
