@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sovereign Control</title>
+<style>
+body{margin:0;background:#020617;color:#7dd3fc;font-family:Arial}
+nav{padding:20px;background:#020617;border-bottom:1px solid #38bdf8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:30px}
+.card{background:#020617;border:1px solid #38bdf8;padding:30px;border-radius:12px;cursor:pointer}
+.card:hover{box-shadow:0 0 30px #38bdf8}
+</style>
+</head>
+<body>
+<nav>YiShen Sovereign Network</nav>
+<div class="grid">
+  <div class="card" onclick="go('nodes.html')">ðŸŒ National Nodes</div>
+  <div class="card" onclick="go('radar.html')">ðŸ“¡ Buyer Radar</div>
+  <div class="card" onclick="go('rfq.html')">ðŸ“¨ RFQ Gateway</div>
+  <div class="card" onclick="go('autoquote.html')">ðŸ’° Auto Quote</div>
+  <div class="card" onclick="go('supplier.html')">ðŸ­ Supplier Gate</div>
+</div>
+<script>function go(p){location.href=p}</script>
+<script src="/sovereign-ui.js"></script>
+</body>
+</html>
+
+
+

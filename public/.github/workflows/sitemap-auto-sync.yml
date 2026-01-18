@@ -1,0 +1,11 @@
+name: Sitemap Auto Sync
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Search Engines
+        run: |
+          curl http://www.google.com/ping?sitemap=https://yishenglobal.net/sitemap.xml

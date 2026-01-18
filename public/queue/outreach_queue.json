@@ -1,0 +1,11 @@
+﻿{
+  "version": "8.0",
+  "note": "Outreach queue for your CRM/email tool. Human approval recommended.",
+  "items": [
+    {"id":"rfq_001","country":"US","persona":"Retail Buyer","trigger":"visited /us/dealers.html","next_action":"send_email_01"},
+    {"id":"rfq_002","country":"SA","persona":"Distributor","trigger":"visited /sa/wholesale.html","next_action":"send_whatsapp_01"},
+    {"id":"rfq_003","country":"MX","persona":"Distributor","trigger":"visited /mx/distributors.html","next_action":"send_email_01"},
+    {"id":"rfq_004","country":"BR","persona":"Reseller","trigger":"visited /br/resellers.html","next_action":"send_whatsapp_01"},
+    {"id":"rfq_005","country":"EU","persona":"Importer","trigger":"visited /eu/importers.html","next_action":"send_email_01"}
+  ]
+}

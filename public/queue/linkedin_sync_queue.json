@@ -1,0 +1,41 @@
+﻿{
+  "version": "8.0",
+  "note": "Queue only. Do NOT auto-post or auto-message; keep human-in-the-loop to respect platform rules.",
+  "items": [
+    {
+      "id": "post_001",
+      "country": "US",
+      "topic": "Predictability > Price",
+      "cta": "Comment 'MOQ' and I’ll send the tier sheet.",
+      "asset_hint": "carousel: packaging + lead-time timeline"
+    },
+    {
+      "id": "post_002",
+      "country": "SA",
+      "topic": "Fast lead time for GCC",
+      "cta": "DM 'SA' for wholesale tiers + certifications.",
+      "asset_hint": "carousel: 3 hero SKUs + delivery windows"
+    },
+    {
+      "id": "post_003",
+      "country": "MX",
+      "topic": "Distributor margin protection",
+      "cta": "Comment 'MX' for mix-SKU carton plan.",
+      "asset_hint": "carousel: box optimization + pallet plan"
+    },
+    {
+      "id": "post_004",
+      "country": "BR",
+      "topic": "Hit SKUs for Brazil",
+      "cta": "DM 'BR' for 3 recommended hero SKUs.",
+      "asset_hint": "carousel: competitor comparison + feature tags"
+    },
+    {
+      "id": "post_005",
+      "country": "EU",
+      "topic": "Compliance-ready mesh chairs",
+      "cta": "Comment 'EU' for compliance pack checklist.",
+      "asset_hint": "carousel: EN/BIFMA summary + QC flow"
+    }
+  ]
+}

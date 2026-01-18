@@ -1,0 +1,127 @@
+﻿{
+  "version": "8.0",
+  "entry": "QUOTE",
+  "nodes": [
+    {
+      "key": "QUOTE",
+      "say": [
+        "Thanks — I can quote in 60s. Which buyer type are you?",
+        "1) Retail  2) Distributor  3) Brand/Private Label  4) Amazon/Ecom  5) Project"
+      ],
+      "expect": ["1","2","3","4","5"],
+      "next": {"1":"RETAIL","2":"DIST","3":"BRAND","4":"ECOM","5":"PROJECT"}
+    },
+    {
+      "key": "RETAIL",
+      "say": [
+        "Retail — got it. What’s your monthly target volume?",
+        "A) 50-100  B) 200-500  C) 1,000+"
+      ],
+      "expect": ["A","B","C","a","b","c"],
+      "next": {"A":"TIER_TRIAL","B":"TIER_GROWTH","C":"TIER_SCALE","a":"TIER_TRIAL","b":"TIER_GROWTH","c":"TIER_SCALE"}
+    },
+    {
+      "key": "DIST",
+      "say": [
+        "Distributor — which channel?",
+        "A) Offline wholesale  B) Key accounts  C) Mixed"
+      ],
+      "expect": ["A","B","C","a","b","c"],
+      "next": {"A":"TIER_SCALE","B":"TIER_SCALE","C":"TIER_SCALE","a":"TIER_SCALE","b":"TIER_SCALE","c":"TIER_SCALE"}
+    },
+    {
+      "key": "BRAND",
+      "say": [
+        "Brand/Private Label — do you need OEM/ODM customization?",
+        "A) Yes  B) No"
+      ],
+      "expect": ["A","B","a","b"],
+      "next": {"A":"TIER_PL","B":"TIER_GROWTH","a":"TIER_PL","b":"TIER_GROWTH"}
+    },
+    {
+      "key": "ECOM",
+      "say": [
+        "Ecom — which platform?",
+        "A) Amazon  B) Shopify/Other"
+      ],
+      "expect": ["A","B","a","b"],
+      "next": {"A":"ECOM_AMZ","B":"ECOM_SHOP","a":"ECOM_AMZ","b":"ECOM_SHOP"}
+    },
+    {
+      "key": "ECOM_AMZ",
+      "say": [
+        "Amazon — send your target price band + top 3 competitors on Amazon.",
+        "I’ll reply with a ‘hit SKU’ recommendation + packaging & compliance notes."
+      ],
+      "expect": ["*"],
+      "next": {"*":"CLOSE"}
+    },
+    {
+      "key": "ECOM_SHOP",
+      "say": [
+        "Shopify/Other — send your website link + target audience.",
+        "I’ll reply with 3 hero SKUs + bundle strategy."
+      ],
+      "expect": ["*"],
+      "next": {"*":"CLOSE"}
+    },
+    {
+      "key": "PROJECT",
+      "say": [
+        "Project/Contract — please send: delivery city + timeline + seating quantity.",
+        "We’ll propose spec + lead time window."
+      ],
+      "expect": ["*"],
+      "next": {"*":"CLOSE"}
+    },
+    {
+      "key": "TIER_TRIAL",
+      "say": [
+        "Recommended Tier: TRIAL (50-100 pcs). Lead time 15-25 days. Low-risk launch.",
+        "Send: model preference (mesh/gaming/standing desk) + target price."
+      ],
+      "expect": ["*"],
+      "next": {"*":"CLOSE"}
+    },
+    {
+      "key": "TIER_GROWTH",
+      "say": [
+        "Recommended Tier: GROWTH (200-500 pcs). Lead time 20-35 days. Mix-SKU supported.",
+        "Send: your monthly forecast + best-selling styles."
+      ],
+      "expect": ["*"],
+      "next": {"*":"CLOSE"}
+    },
+    {
+      "key": "TIER_SCALE",
+      "say": [
+        "Recommended Tier: SCALE (1,000+ pcs). Lead time 25-45 days. Priority production windows.",
+        "Send: quantity split + required certifications (BIFMA/EN1335/etc)."
+      ],
+      "expect": ["*"],
+      "next": {"*":"CLOSE"}
+    },
+    {
+      "key": "TIER_PL",
+      "say": [
+        "Recommended Tier: PRIVATE LABEL (300-800 pcs). OEM/ODM + packaging co-branding supported.",
+        "Send: logo/brand guide + target positioning (mid/premium)."
+      ],
+      "expect": ["*"],
+      "next": {"*":"CLOSE"}
+    },
+    {
+      "key": "CLOSE",
+      "say": [
+        "Perfect — last step:",
+        "1) Your destination port/city",
+        "2) Incoterm (FOB/CIF/DDP)",
+        "3) WhatsApp contact name",
+        "I’ll respond with MOQ + lead time + tier price range + next steps."
+      ],
+      "expect": ["*"],
+      "next": {"*":"DONE"}
+    },
+    { "key":"DONE", "say":["✅ Noted. Quoting now."], "expect":["*"], "next":{"*":"DONE"} }
+  ]
+}

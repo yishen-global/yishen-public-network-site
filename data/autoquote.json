@@ -1,0 +1,36 @@
+﻿{
+  "currency": "USD",
+  "default_moq": 100,
+  "products": [
+    {
+      "sku": "YG-MESH-01",
+      "name": "Ergonomic Mesh Chair",
+      "moq": 100,
+      "price_tiers": [
+        { "min": 100, "max": 299, "unit": 49.0 },
+        { "min": 300, "max": 999, "unit": 45.0 },
+        { "min": 1000, "max": 999999, "unit": 41.0 }
+      ]
+    },
+    {
+      "sku": "YG-GAME-01",
+      "name": "Gaming Chair",
+      "moq": 200,
+      "price_tiers": [
+        { "min": 200, "max": 499, "unit": 59.0 },
+        { "min": 500, "max": 999, "unit": 54.0 },
+        { "min": 1000, "max": 999999, "unit": 49.0 }
+      ]
+    },
+    {
+      "sku": "YG-DESK-01",
+      "name": "Standing Desk",
+      "moq": 50,
+      "price_tiers": [
+        { "min": 50, "max": 199, "unit": 129.0 },
+        { "min": 200, "max": 499, "unit": 119.0 },
+        { "min": 500, "max": 999999, "unit": 109.0 }
+      ]
+    }
+  ]
+}

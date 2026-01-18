@@ -1,6 +1,20 @@
+﻿# ---- ignore heavy / irrelevant ----
+.git
+.git/**
 node_modules
-.next
-.nuxt
-dist
-build
-out
+node_modules/**
+**/.DS_Store
+**/Thumbs.db
+
+# 如果你把引擎/脚本也放进 site，会爆炸，全部忽略：
+engine
+engine/**
+blocks
+blocks/**
+DEPLOY
+DEPLOY/**
+**/*.ps1
+**/*.py
+**/*.zip
+**/*.7z
+**/*.rar

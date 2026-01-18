@@ -1,0 +1,1 @@
+﻿{ "note": "Static sites may not support POST. If you add a serverless endpoint later, map /api/track to it." }

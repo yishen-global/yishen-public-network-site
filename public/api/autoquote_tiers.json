@@ -1,0 +1,9 @@
+﻿{
+  "version": "8.0",
+  "tiers": [
+    {"name":"Trial", "moq":"50-100 pcs", "lead_time":"15-25 days", "best_for":"new channel tests", "notes":"fast sampling + low-risk launch"},
+    {"name":"Growth", "moq":"200-500 pcs", "lead_time":"20-35 days", "best_for":"retail programs", "notes":"optimized carton & mix-SKU"},
+    {"name":"Scale", "moq":"1,000+ pcs", "lead_time":"25-45 days", "best_for":"distributors & chains", "notes":"priority production + stable windows"},
+    {"name":"Private Label", "moq":"300-800 pcs", "lead_time":"30-55 days", "best_for":"brands", "notes":"OEM/ODM, packaging + compliance pack"}
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "version": "8.0",
+  "logic": {
+    "signals": [
+      {"if": {"q": "oem|odm|private label|brand"}, "persona": "Private Label Brand"},
+      {"if": {"q": "distributor|wholesale|importer"}, "persona": "Distributor"},
+      {"if": {"q": "amazon|fba|ecommerce|shopify"}, "persona": "E-commerce Seller"},
+      {"if": {"q": "retail|store|chain|buyer"}, "persona": "Retail Buyer"},
+      {"if": {"q": "project|fit-out|tender|gov|institution"}, "persona": "Project/Contract Buyer"}
+    ],
+    "default_persona": "Procurement Manager"
+  }
+}

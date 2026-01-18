@@ -1,0 +1,90 @@
+{
+	"name": "vercel-vscode",
+	"publisher": "haydenbleasel",
+	"private": true,
+	"displayName": "Vercel for VS Code",
+	"description": "A VS Code extension for Vercel deployment status.",
+	"icon": "icon.png",
+	"version": "1.0.35",
+	"engines": {
+		"vscode": "^1.72.0"
+	},
+	"categories": [
+		"Testing",
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"license": "ISC",
+	"main": "./out/extension.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/haydenbleasel/vercel-vscode"
+	},
+	"contributes": {
+		"configuration": {
+			"title": "Vercel",
+			"properties": {
+				"vercelVSCode.accessToken": {
+					"type": "string",
+					"default": "",
+					"description": "Your Vercel Access Token"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run build",
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"bump-deps": "npx npm-check-updates -u -x @types/vscode,eslint && pnpm install"
+	},
+	"dependencies": {
+		"cross-fetch": "^4.0.0",
+		"date-fns": "^4.1.0",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@auto-it/all-contributors": "^11.2.1",
+		"@auto-it/first-time-contributor": "^11.2.1",
+		"@auto-it/npm": "^11.2.1",
+		"@biomejs/biome": "1.9.3",
+		"@types/node": "22.x",
+		"@types/vscode": "1.72.0",
+		"auto": "^11.2.1",
+		"tsup": "^8.3.0",
+		"typescript": "^5.6.3",
+		"ultracite": "4.1.4"
+	},
+	"author": "Hayden Bleasel <hello@haydenbleasel.com>",
+	"contributors": [
+		"Anna Zhang <annazhang343@gmail.com>"
+	],
+	"auto": {
+		"plugins": [
+			"npm",
+			"all-contributors",
+			"first-time-contributor",
+			"released"
+		],
+		"owner": "haydenbleasel",
+		"repo": "vercel-vscode",
+		"name": "Hayden Bleasel",
+		"email": "hello@haydenbleasel.com"
+	},
+	"__metadata": {
+		"id": "0eeefb69-7cbc-4159-b18a-1557d4772bcc",
+		"publisherId": "52201037-38ea-4af6-84e1-85cff73b9e26",
+		"publisherDisplayName": "Hayden Bleasel",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1733466078461,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 2666389
+	}
+}

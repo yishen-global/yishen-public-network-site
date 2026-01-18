@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>LEISA Procurement Pack — Free Download</title>
+  <meta name="description" content="Free buyer-ready procurement pack: best-sellers, packaging, certifications, MOQ & lead-time playbook. Get it in 60 seconds."/>
+  <style>
+    body{font-family:system-ui,Segoe UI,Arial; margin:0; background:#0b0f14; color:#fff;}
+    .wrap{max-width:980px; margin:0 auto; padding:46px 18px;}
+    .card{border:1px solid rgba(255,255,255,.12); border-radius:18px; padding:22px; background:rgba(255,255,255,.06);}
+    input,select{width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.25); color:#fff;}
+    label{font-size:12px; opacity:.85;}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+    .btn{display:inline-block; padding:12px 16px; border-radius:12px; background:#1f8f4a; color:#fff; text-decoration:none; font-weight:800;}
+    .btn2{display:inline-block; padding:12px 16px; border-radius:12px; background:rgba(255,255,255,.10); color:#fff; text-decoration:none; font-weight:800;}
+    .muted{opacity:.8; font-size:12px;}
+    @media (max-width:720px){ .grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div style="font-size:12px;opacity:.85;">LEISA · Phase VIII Lead Magnet</div>
+      <h1 style="margin:10px 0 8px;">Free Procurement Pack (Buyer-Ready)</h1>
+      <div class="muted">
+        Includes: Best-sellers list · MOQ/Lead-time matrix · Packaging drop-test checklist · Certifications summary · RFQ template.
+      </div>
+      <hr style="border:0;border-top:1px solid rgba(255,255,255,.12); margin:18px 0;"/>
+
+      <div class="grid">
+        <div>
+          <label>Name</label>
+          <input id="n" placeholder="Your name"/>
+        </div>
+        <div>
+          <label>Work Email</label>
+          <input id="e" placeholder="name@company.com"/>
+        </div>
+        <div>
+          <label>Country</label>
+          <select id="c">
+            <option>US</option><option>SA</option><option>MX</option><option>BR</option><option>EU</option><option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label>Persona</label>
+          <select id="p">
+            <option>Retail Buyer</option>
+            <option>Distributor</option>
+            <option>Private Label Brand</option>
+            <option>E-commerce Seller</option>
+            <option>Procurement Manager</option>
+            <option>Project/Contract Buyer</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn" id="dl" href="/docs/LEISA_Procurement_Pack_PLACEHOLDER.pdf" download>Download Pack</a>
+        <a class="btn2" id="wa" href="#">WhatsApp — Ask for Quote</a>
+        <a class="btn2" href="mailto:=RFQ%20Request%20—%20LEISA%20Procurement%20Pack&body=Hi%20LEISA,%0A%0AI%20downloaded%20the%20procurement%20pack.%20Please%20send%20MOQ%2C%20lead%20time%2C%20certifications%2C%20and%20price%20tiers.%0A%0ACountry%3A%20%0APersona%3A%20%0AProducts%3A%20">Email RFQ</a>
+      </div>
+
+      <div class="muted" style="margin-top:10px;">
+        Note: This is a sovereign static capture. If you later add a serverless endpoint, you can store form submissions.
+      </div>
+    </div>
+  </div>
+
+<script>
+(function(){
+  var wa = "8618857277313";
+  function enc(s){ return encodeURIComponent(s || ""); }
+  function build(){
+    var n = document.getElementById("n").value || "";
+    var e = document.getElementById("e").value || "";
+    var c = document.getElementById("c").value || "Other";
+    var p = document.getElementById("p").value || "Buyer";
+    var msg = "Hi LEISA, I want the Procurement Pack + quote.%0A"
+      + "Name: " + enc(n) + "%0A"
+      + "Email: " + enc(e) + "%0A"
+      + "Country: " + enc(c) + "%0A"
+      + "Persona: " + enc(p) + "%0A"
+      + "Please send MOQ + lead time + best-sellers + certifications + tiers.";
+    return "https://wa.me/" + wa + "?text=" + msg;
+  }
+  var waBtn = document.getElementById("wa");
+  waBtn.href = build();
+  ["n","e","c","p"].forEach(function(id){
+    document.getElementById(id).addEventListener("input", function(){ waBtn.href = build(); });
+    document.getElementById(id).addEventListener("change", function(){ waBtn.href = build(); });
+  });
+})();
+</script>
+<script src="/sovereign-ui.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,27 @@
+﻿{
+    "office chair":  {
+                         "MOQ":  100,
+                         "LEAD":  "7-15 days",
+                         "FOB":  "68-120"
+                     },
+    "standing desk":  {
+                          "MOQ":  50,
+                          "LEAD":  "15-25 days",
+                          "FOB":  "160-320"
+                      },
+    "sofa":  {
+                 "MOQ":  30,
+                 "LEAD":  "18-30 days",
+                 "FOB":  "240-520"
+             },
+    "mesh chair":  {
+                       "MOQ":  150,
+                       "LEAD":  "7-12 days",
+                       "FOB":  "55-95"
+                   },
+    "gaming chair":  {
+                         "MOQ":  200,
+                         "LEAD":  "10-20 days",
+                         "FOB":  "88-160"
+                     }
+}

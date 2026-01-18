@@ -1,0 +1,10 @@
+us	United States	en
+sa	Saudi Arabia	ar
+mx	Mexico	es
+br	Brazil	pt
+de	Germany	de
+fr	France	fr
+jp	Japan	ja
+kr	South Korea	ko
+ae	United Arab Emirates	ar
+...
